@@ -47,3 +47,13 @@ description: Technical writing on AI infrastructure, reliability and systems —
     <p class="more"><a href="https://dyota.substack.com">subscribe on Substack &rarr;</a></p>
   </section>
 </div>
+
+<section class="section">
+  <h2 class="section-title"><i class="fa-brands fa-wordpress" aria-hidden="true"></i> archive · aruntechgeek (2008 – 2017)</h2>
+  <ul class="essay-index essay-index-sm">
+    {% for w in site.data.writing.archive %}
+      <li><a href="{{ w.url }}">{{ w.title }}</a><span class="essay-index-date">{{ w.date | date: '%b %Y' }}</span></li>
+    {% endfor %}
+  </ul>
+  <p class="more">Poems and stories from the old blogs are on <a href="{{ '/stories/' | relative_url }}">poems &amp; stories</a>; longer opinion pieces are under <a href="{{ '/essays/' | relative_url }}">essays</a>.</p>
+</section>

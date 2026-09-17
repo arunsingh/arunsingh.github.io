@@ -1,0 +1,19 @@
+# Personal blogs, keyed by the `source` used in stories.yml
+arunksingh:
+  name: arunksingh.wordpress.com
+  short: wordpress
+  url: https://arunksingh.wordpress.com
+  years: 2018 – 2025
+  about: short stories, poems and reflections
+blogspot:
+  name: arunkrsingh.blogspot.com
+  short: blogspot
+  url: https://arunkrsingh.blogspot.com
+  years: "2015"
+  about: Hindi verse, parables and public-policy notes
+aruntechgeek:
+  name: aruntechgeek.wordpress.com
+  short: techgeek
+  url: https://aruntechgeek.wordpress.com
+  years: 2008 – 2017
+  about: the original tech blog — Linux, SRE and early poems

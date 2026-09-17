@@ -9,7 +9,7 @@
   var index = null, loading = null, active = -1, results = [], lastFocus = null;
 
   var LABELS = { page: 'page', cv: 'cv', essay: 'essay', poem: 'poem', story: 'story', reflection: 'reflection',
-    medium: 'blog · medium', substack: 'blog · dyota', book: 'book', code: 'code', project: 'project', news: 'news', post: 'blog', paper: 'paper' };
+    medium: 'blog · medium', substack: 'blog · dyota', book: 'book', code: 'code', project: 'project', news: 'news', post: 'blog', paper: 'paper', archive: 'blog · archive' };
 
   function norm(s) {
     return (s || '').toString().toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '');
@@ -71,7 +71,7 @@
   }
 
   function snippet(item, terms) {
-    if (!item.x || item.x === 'wordpress') return '';
+    if (!item.x || /^[\w.-]+\.(com|net|org)$/.test(item.x)) return '';   // bare blog host: no snippet
     var x = item.x, lx = norm(x), pos = -1;
     for (var i = 0; i < terms.length && pos === -1; i++) pos = find(lx, terms[i]);
     if (pos === -1) return x.length > 120 ? x.slice(0, 120) + '…' : x;

@@ -3,7 +3,7 @@ layout: page
 title: "poems & short stories"
 permalink: /stories/
 description: "Fiction and verse in English and Hindi — mostly about love, distance and the people we become."
-intro: 'Fiction and verse in English and Hindi — mostly about love, distance and the people we become. Most live on my <a href="https://arunksingh.wordpress.com">WordPress blog</a>.'
+intro: 'Fiction and verse in English and Hindi — mostly about love, distance and the people we become. Collected from <a href="https://arunksingh.wordpress.com">arunksingh.wordpress.com</a>, <a href="https://arunkrsingh.blogspot.com">arunkrsingh.blogspot.com</a> and <a href="https://aruntechgeek.wordpress.com">aruntechgeek.wordpress.com</a>.'
 ---
 {% assign native = site.poems | where_exp: "p", "p.published != false" | sort: 'date' | reverse %}
 {% assign poems = site.data.stories | where: 'kind', 'poem' %}
@@ -26,7 +26,7 @@ intro: 'Fiction and verse in English and Hindi — mostly about love, distance a
     <h2 class="section-title">short stories</h2>
     <ul class="essay-index essay-index-sm">
       {% for s in stories %}
-        <li><a href="{{ s.url }}">{{ s.title }}</a><span class="essay-index-date">{{ s.date | date: '%b %Y' }}</span></li>
+        <li><a href="{{ s.url }}"{% if s.lang %} lang="{{ s.lang }}"{% endif %}>{{ s.title }}</a><span class="essay-index-date" title="{{ site.data.blogs[s.source].name }}">{{ site.data.blogs[s.source].short }} · {{ s.date | date: '%Y' }}</span></li>
       {% endfor %}
     </ul>
   </section>
@@ -36,7 +36,7 @@ intro: 'Fiction and verse in English and Hindi — mostly about love, distance a
       <h2 class="section-title">poems</h2>
       <ul class="essay-index essay-index-sm">
         {% for s in poems %}
-          <li><a href="{{ s.url }}" lang="{% if s.title contains 'यादें' %}hi{% else %}en{% endif %}">{{ s.title }}</a><span class="essay-index-date">{{ s.date | date: '%b %Y' }}</span></li>
+          <li><a href="{{ s.url }}"{% if s.lang %} lang="{{ s.lang }}"{% endif %}>{{ s.title }}</a><span class="essay-index-date" title="{{ site.data.blogs[s.source].name }}">{{ site.data.blogs[s.source].short }} · {{ s.date | date: '%Y' }}</span></li>
         {% endfor %}
       </ul>
     </section>
@@ -44,11 +44,18 @@ intro: 'Fiction and verse in English and Hindi — mostly about love, distance a
       <h2 class="section-title">reflections</h2>
       <ul class="essay-index essay-index-sm">
         {% for s in reflections %}
-          <li><a href="{{ s.url }}">{{ s.title }}</a><span class="essay-index-date">{{ s.date | date: '%b %Y' }}</span></li>
+          <li><a href="{{ s.url }}"{% if s.lang %} lang="{{ s.lang }}"{% endif %}>{{ s.title }}</a><span class="essay-index-date" title="{{ site.data.blogs[s.source].name }}">{{ site.data.blogs[s.source].short }} · {{ s.date | date: '%Y' }}</span></li>
         {% endfor %}
       </ul>
     </section>
   </div>
 </div>
 
-<p class="more">Read everything on <a href="https://arunksingh.wordpress.com">arunksingh.wordpress.com &rarr;</a></p>
+<section class="section">
+  <h2 class="section-title">the blogs</h2>
+  <ul class="blogs">
+    {% for b in site.data.blogs %}
+      <li><a href="{{ b[1].url }}">{{ b[1].name }}</a> <span class="muted">— {{ b[1].about }}</span> <span class="essay-index-date">{{ b[1].years }}</span></li>
+    {% endfor %}
+  </ul>
+</section>

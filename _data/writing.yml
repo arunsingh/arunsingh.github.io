@@ -82,3 +82,36 @@ substack:
     url: https://dyota.substack.com/p/engineering-leadership-resolving
     date: 2024-12-11
     blurb: Engineering management through seeking collaborative alignment.
+
+# Earlier tech blog — aruntechgeek.wordpress.com (2008–2017)
+archive:
+  - title: Site Reliability Engineering or DevOps — Changing the Digital Economy
+    url: https://aruntechgeek.wordpress.com/2017/07/18/site-reliability-engineering-or-devops-changing-digital-economy/
+    date: 2017-07-18
+  - title: Top Ubuntu Blogs
+    url: https://aruntechgeek.wordpress.com/2015/08/24/top-ubuntu-blogs/
+    date: 2015-08-24
+  - title: Cost-Effective Wireless Sensors for Structural Health Monitoring
+    url: https://aruntechgeek.wordpress.com/2010/08/31/cost-effective-wireless-sensors-for-structural-health-monitoring/
+    date: 2010-08-31
+  - title: How to Connect Nokia N70 and Motorola L7/L9 Phones in Ubuntu
+    url: https://aruntechgeek.wordpress.com/2008/10/25/how-to-connect-n70-and-motorola-l-series-l7-l9-sets-in-ubuntu/
+    date: 2008-10-25
+  - title: "How-to: Tweak and Maximise Your Bandwidth in Linux via sysctl"
+    url: https://aruntechgeek.wordpress.com/2008/09/16/howto-tweak-and-maximize-your-bandwidth-in-ubuntulinux-via-sysctl/
+    date: 2008-09-16
+  - title: Java Learners, Check Out These Sites
+    url: https://aruntechgeek.wordpress.com/2008/09/13/java-learners-checkout-these-sites/
+    date: 2008-09-13
+  - title: My Certificate for Setting a World Record (Firefox Download Day)
+    url: https://aruntechgeek.wordpress.com/2008/09/11/my-certificate-for-setting-world-record/
+    date: 2008-09-11
+  - title: "World's Smallest Web Server — a Matchbox-Size Server"
+    url: https://aruntechgeek.wordpress.com/2008/08/30/worlds-smallest-webserver-matchbox-size-server/
+    date: 2008-08-30
+  - title: "Choosing a Linux Distro: Take This One-Minute Test"
+    url: https://aruntechgeek.wordpress.com/2008/08/30/choosing-linux-distro-take-this-small-1-minute-test/
+    date: 2008-08-30
+  - title: Which Linux Distro Is Best?
+    url: https://aruntechgeek.wordpress.com/2008/08/28/which-linux-distro-is-best/
+    date: 2008-08-28

@@ -14,16 +14,19 @@ sitemap: false
 {"t":{{ e.title | jsonify }},"u":"{{ e.url | relative_url }}","k":"essay","d":"{{ e.date | date: '%b %Y' }}","x":{{ e.content | strip_html | normalize_whitespace | truncatewords: 400 | jsonify }}},
 {%- endunless -%}{%- endfor -%}
 {%- for e in site.data.essays_elsewhere -%}
-{"t":{{ e.title | jsonify }},"u":{{ e.url | jsonify }},"k":"essay","d":"{{ e.date | date: '%b %Y' }}","x":""},
+{"t":{{ e.title | jsonify }},"u":{{ e.url | jsonify }},"k":"essay","d":"{{ e.date | date: '%b %Y' }}","x":{{ e.url | split: '/' | slice: 2 | first | jsonify }}},
 {%- endfor -%}
 {%- for p in site.poems -%}{%- unless p.published == false -%}
 {"t":{{ p.title | jsonify }},"u":"{{ p.url | relative_url }}","k":{{ p.kind | default: 'poem' | jsonify }},"d":"{{ p.date | date: '%b %Y' }}","x":{{ p.content | strip_html | normalize_whitespace | truncatewords: 200 | jsonify }}},
 {%- endunless -%}{%- endfor -%}
 {%- for s in site.data.stories -%}
-{"t":{{ s.title | jsonify }},"u":{{ s.url | jsonify }},"k":{{ s.kind | jsonify }},"d":"{{ s.date | date: '%b %Y' }}","x":"wordpress"},
+{"t":{{ s.title | jsonify }},"u":{{ s.url | jsonify }},"k":{{ s.kind | jsonify }},"d":"{{ s.date | date: '%b %Y' }}","x":{{ site.data.blogs[s.source].name | default: '' | jsonify }}},
 {%- endfor -%}
 {%- for w in site.data.writing.medium -%}
 {"t":{{ w.title | jsonify }},"u":{{ w.url | jsonify }},"k":"medium","d":"{{ w.date | date: '%b %Y' }}","x":{{ w.blurb | jsonify }}},
+{%- endfor -%}
+{%- for w in site.data.writing.archive -%}
+{"t":{{ w.title | jsonify }},"u":{{ w.url | jsonify }},"k":"archive","d":"{{ w.date | date: '%b %Y' }}","x":"aruntechgeek.wordpress.com"},
 {%- endfor -%}
 {%- for w in site.data.writing.substack -%}
 {"t":{{ w.title | jsonify }},"u":{{ w.url | jsonify }},"k":"substack","d":"{{ w.date | date: '%b %Y' }}","x":{{ w.blurb | jsonify }}},
