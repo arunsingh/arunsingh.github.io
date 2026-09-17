@@ -1,0 +1,101 @@
+---
+layout: default
+title: about
+---
+<section class="about">
+  <header class="about-header">
+    <h1 class="about-name"><span class="first">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}</h1>
+    <p class="about-tagline">{{ site.tagline }} · <span class="muted">{{ site.location }}</span></p>
+  </header>
+
+  <figure class="profile">
+    <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Portrait of Arun Kumar Singh" width="240" height="240">
+    <figcaption>
+      <span>VP &amp; Sr. Principal Engineer, Godspeed</span>
+      <span>Founder &amp; CTO, Godquantum Systems Labs</span>
+    </figcaption>
+  </figure>
+
+  <div class="bio prose">
+    <p>
+      I'm a generalist <strong>site reliability engineer</strong> and a specialist in
+      <strong>compute &amp; platform infrastructure systems</strong>. For 16+ years I've built and
+      operated the layer everything else stands on — from Solaris kernel crash dumps at Sun
+      Microsystems to multi-DC GPU clusters serving LLM training and inference today.
+    </p>
+    <p>
+      I started out as research staff at <strong>IIT Delhi</strong>, measuring rural internet
+      connectivity and hacking together multitouch surfaces. Since then I've scaled Industrial IoT
+      pipelines to 3M writes/sec, run SRE for healthcare software used by 4 million people, and
+      co-founded ventures in robotics, EV charging and quantum computing. Along the way I've worked
+      with systems at hyperscale — 120 EB+ of object storage, 12,000+ Kubernetes nodes and 80B+
+      events a day.
+    </p>
+    <p>
+      Right now I lead SRE, production AI infrastructure and platform engineering at
+      <strong>Godspeed</strong>, build a full-stack quantum computing platform at
+      <a href="https://godquantum.tech">Godquantum</a>, and contribute to eBPF and streaming
+      open source. I founded <strong>GDG Cloud Bangalore</strong> and write about infrastructure on
+      <a href="https://medium.com/@aruns89">Medium</a> and in the
+      <a href="https://dyota.substack.com">Dyota</a> newsletter.
+    </p>
+  </div>
+
+  {% include socials.html %}
+</section>
+
+<section class="section">
+  <h2 class="section-title">news</h2>
+  {% assign news = site.data.news | sort: 'date' | reverse %}
+  <table class="news">
+    <tbody>
+    {% for n in news limit: site.news_limit %}
+      <tr>
+        <th scope="row" class="mono">{{ n.date | date: '%b %Y' }}</th>
+        <td>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="section">
+  <h2 class="section-title">at a glance</h2>
+  <ul class="stats">
+    <li><strong>16+</strong><span>years in SRE, platform &amp; infrastructure</span></li>
+    <li><strong>120 EB+</strong><span>object storage operated</span></li>
+    <li><strong>12,000+</strong><span>Kubernetes nodes</span></li>
+    <li><strong>80B+</strong><span>events processed per day</span></li>
+    <li><strong>3M/s</strong><span>IoT writes after an 8× re-architecture</span></li>
+    <li><strong>30×</strong><span>developer productivity via an agentic IDP</span></li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2 class="section-title">latest writing</h2>
+  {% assign all_writing = site.data.writing.medium | concat: site.data.writing.substack | sort: 'date' | reverse %}
+  <ul class="entries">
+    {% for w in all_writing limit: site.latest_writing_limit %}
+      {% assign src = 'Medium' %}{% if w.url contains 'substack' %}{% assign src = 'Dyota' %}{% endif %}
+      <li>
+        <span class="entry-date mono">{{ w.date | date: '%b %-d, %Y' }}</span>
+        <a class="entry-title" href="{{ w.url }}">{{ w.title }}</a>
+        <span class="badge">{{ src }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="more"><a href="{{ '/writing/' | relative_url }}">all writing &rarr;</a></p>
+</section>
+
+<section class="section">
+  <h2 class="section-title">timeline</h2>
+  <ul class="timeline">
+    {% for job in site.data.cv.experience %}
+      <li>
+        <span class="tl-dates mono">{{ job.dates }}</span>
+        <span class="tl-text"><strong>{{ job.org }}</strong> — {{ job.role }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="more"><a href="{{ '/cv/' | relative_url }}">full cv &rarr;</a></p>
+</section>

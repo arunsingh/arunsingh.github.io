@@ -1,0 +1,128 @@
+summary: >-
+  Engineering leader with 16+ years across industry, start-ups and research — ICT, AIOps,
+  FinOps, healthcare, Industrial IoT and energy. Site reliability, cloud and AI infrastructure,
+  architecture, security, production operations and incident management.
+
+experience:
+  - org: Godspeed Pte Ltd
+    role: VP & Sr. Principal Engineer — SRE, Production AI Infrastructure & Platform Engineering
+    dates: Nov 2022 – present
+    location: San Diego, CA
+    meta: IC/management 30:70 · team of 22
+    bullets:
+      - Architected GPU cluster topology and AI inference infrastructure for multi-DC deployments — compute-node placement, workload scheduling and GPU density for large-scale LLM training and inference.
+      - Led architecture of a Nautobot agentic AI platform for on-prem and cloud asset lifecycle management, lifting developer productivity 30× through an internal developer platform.
+      - Built a smart inferencing engine — smart queues, dynamic model router, custom model parameters and tuned nodes.
+      - Shipped quantum algorithms, a quantum-kernel OS and a quantum simulation platform; built a Linux traffic generator for network performance testing.
+      - Drove fundraising, customer PoCs and GTM (5× customer growth month-over-month); ran CASB, PCI-DSS, HIPAA, NIST CSF and GDPR audits.
+  - org: Stealth start-up — Inductive-charging EV mobility
+    role: Founder — SRE, Product & Platform Architecture
+    dates: Nov 2021 – Oct 2022
+    location: Canada · India · Taiwan · Singapore
+    bullets:
+      - Bootstrapped an inductive-charging prototype through contract manufacturing in Southeast Asia for product-market-fit evaluation.
+      - Led the software platform — battery observability and health, OEM integration and shift-left SRE across build, test, release and monitoring.
+  - org: NextGen Healthcare (formerly QSI)
+    role: Sr. Staff Site Reliability Engineer
+    dates: Aug 2019 – Oct 2021
+    location: San Diego, CA
+    meta: team of 5–68
+    bullets:
+      - Automated multi-cloud infrastructure and migrated on-prem DC workloads to cloud, cutting operational overhead by a third.
+      - Built a performance benchmark suite (5× reliability) and product-wide instrumentation for apps used by 4 million users.
+      - Built PaaS abstractions that cut multi-cloud deploys from a day to under an hour; re-architected BI reporting infrastructure, unlocking USD 50M in subscriptions.
+  - org: MachinePulse (now Mahindra Teqo)
+    role: Principal Architect — SRE, Product & Platform Engineering
+    dates: Oct 2017 – Feb 2019
+    location: Bengaluru, India
+    meta: team of 8–45
+    bullets:
+      - Launched a leading on-prem monitoring product for the solar industry.
+      - Scaled the system 8× to 3M writes/sec across 700+ installations via an event-driven architecture; introduced LitmusChaos.
+      - Built a 30-person cross-functional org of PM, engineering, QA and DevOps.
+  - org: Infinite Forest, Inc
+    role: Sr. SRE, Platform Engineering
+    dates: Oct 2016 – Aug 2017
+    location: Bengaluru, India
+    bullets:
+      - Shipped the back-end engine for an ML-based matchmaking product with fault-tolerant 24×7 monitoring.
+  - org: Livestream (now Vimeo)
+    role: Sr. Site Reliability Engineer
+    dates: Jun 2016 – Sep 2016
+    location: Bengaluru, India
+    bullets:
+      - Scalability and uptime for a live video streaming platform on 4,550 servers.
+  - org: Shadowfax Technologies
+    role: Tech Architect — Backend Infrastructure & DevOps
+    dates: Oct 2015 – Jan 2016
+    location: Bengaluru, India
+    bullets:
+      - Built an on-demand hyperlocal delivery product in Python and Django.
+  - org: Indian Institute of Technology Delhi
+    role: Research Staff — Sr. Computer Scientist
+    dates: Apr 2010 – Jun 2015
+    location: New Delhi, India
+    bullets:
+      - Studied rural internet connectivity with Gram Vaani — network audits and wireless performance measurement; deployed e-governance technology to field locations.
+      - Built a multitouch surface table and a 100-inch interactive wall (TUIO, PyMT, MT4j).
+  - org: Sun Microsystems
+    role: Member of Technical Staff
+    dates: Jun 2009 – Mar 2010
+    location: India
+    bullets:
+      - Sun Cluster on the Solaris kernel — crash-dump analysis and VM, procfs and boot subsystems.
+  - org: Sapro Robotics
+    role: Co-founder & Systems Engineering
+    dates: Feb 2008 – Jan 2010
+    location: Ghaziabad, India
+    bullets:
+      - Surgical robots for healthcare, UAVs and mobile robots for the defence sector.
+
+education:
+  - school: Harvard Kennedy School
+    degree: Public Leadership Credential
+    dates: Feb 2026 – ongoing
+  - school: Krishna Institute of Engineering & Technology
+    degree: B.Tech, Information Technology
+    dates: 2005 – 2009
+
+skills:
+  - group: Languages
+    items: Python, Go, Rust, Java, C, TypeScript, SQL, shell, Qiskit, PennyLane, Cirq
+  - group: AI infrastructure
+    items: GPU cluster topology, LLM inference, Slurm, LangChain, AutoGen, LangGraph, n8n
+  - group: Platform
+    items: Kubernetes, Docker, Terraform, Ansible, Puppet, Helm, ArgoCD, Spinnaker, OpenStack, MaaS, Nautobot
+  - group: Data & messaging
+    items: Kafka, Debezium, Airflow, Spark, PostgreSQL, ClickHouse, MySQL, MongoDB, Redis
+  - group: Observability & reliability
+    items: Prometheus, Grafana, OpenTelemetry, Datadog, ELK, ExtraHop, perf, flame graphs, LitmusChaos, Gatling, k6
+  - group: Cloud
+    items: AWS, GCP, Azure, Fastly
+  - group: Compliance
+    items: HIPAA, SOC 2, PCI-DSS, GDPR, DPDP, NIST CSF, CIS, ITIL
+
+certifications:
+  - NVIDIA AI Infrastructure & Operations (2025)
+  - Harvard — Exercising Leadership (2024)
+  - Google Cybersecurity (2024) · Chaos Engineering (2024) · Istio (2024) · ITIL (2024)
+  - Kubernetes, Docker, Linkerd, Prometheus (2023)
+  - AWS (2019, 2021, 2023) · Linux (2019, 2023) · GCP (2019)
+  - Google Cloud SRE — Measuring & Managing Reliability (2019)
+  - Python — University of Michigan (2018)
+
+community:
+  - title: GDG Cloud Bangalore
+    role: Founder & tech evangelist
+    dates: 2018 – present
+    text: Built and lead a 10,000+ member Google Developer Group chapter; run a four-person executive board and regular tech talks.
+  - title: Open source
+    role: Contributor
+    dates: 2022 – present
+    text: cilium/ebpf, Apache Iggy, Apache Airflow, Cilium and Linkerd; contributor to the Stanford Eyepatch project.
+
+# Talks — add entries as {date, title, event, url}
+talks:
+  - date: 2018 – present
+    title: Community tech talks on SRE, cloud-native infrastructure and AI platforms
+    event: GDG Cloud Bangalore meetups

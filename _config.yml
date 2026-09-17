@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------
+#  aruns.me — personal site of Arun Kumar Singh
+#  Jekyll site inspired by al-folio (github.com/alshedivat/al-folio).
+#  Builds natively on GitHub Pages — no Actions or custom plugins required.
+# ---------------------------------------------------------------------------
+
+title: Arun Kumar Singh
+first_name: Arun
+middle_name: Kumar
+last_name: Singh
+tagline: Distinguished Engineer · SRE & AI Infrastructure
+location: San Diego, CA
+email: arunsingh.in@gmail.com
+description: >-
+  Arun Kumar Singh — Distinguished Engineer working on site reliability,
+  compute & platform infrastructure, GPU clusters for LLM inference, and
+  quantum-classical systems.
+keywords: SRE, platform engineering, AI infrastructure, GPU, Kubernetes, quantum computing, distributed systems
+
+# Custom domain (see CNAME). Change url to https://arunsingh.github.io if you drop the domain.
+url: "https://aruns.me"
+baseurl: ""
+lang: en
+
+author:
+  name: Arun Kumar Singh
+  email: arunsingh.in@gmail.com
+
+twitter:
+  username: aruns89
+social:
+  name: Arun Kumar Singh
+  links:
+    - https://github.com/arunsingh
+    - https://www.linkedin.com/in/arunsingh23/
+    - https://x.com/aruns89
+    - https://medium.com/@aruns89
+
+# Navigation (order = navbar order)
+nav:
+  - title: about
+    url: /
+  - title: projects
+    url: /projects/
+  - title: writing
+    url: /writing/
+  - title: cv
+    url: /cv/
+
+# Homepage knobs
+news_limit: 8
+latest_writing_limit: 5
+
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /blog/:year/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - "*.sh"

@@ -1,0 +1,43 @@
+---
+layout: page
+title: projects
+permalink: /projects/
+description: Ventures, platforms, open source and research I've built or led.
+---
+{% assign categories = "venture,platform,open-source,research" | split: "," %}
+<div class="filters" role="group" aria-label="Filter projects">
+  <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">all</button>
+  {% for c in categories %}
+    <button type="button" class="chip" data-filter="{{ c }}" aria-pressed="false">{{ c }}</button>
+  {% endfor %}
+</div>
+
+<div class="cards">
+  {% for p in site.data.projects %}
+    {% assign primary = p.links | first %}
+    <article class="card" data-category="{{ p.category }}">
+      <div class="card-media">
+        {% if primary %}<a href="{{ primary.url }}" tabindex="-1" aria-hidden="true">{% endif %}
+        <img src="{{ '/assets/img/projects/' | append: p.image | relative_url }}" alt="" loading="lazy" width="640" height="360">
+        {% if primary %}</a>{% endif %}
+      </div>
+      <div class="card-body">
+        <p class="card-kicker mono">{{ p.category }} · {{ p.years }}</p>
+        <h2 class="card-title">
+          {% if primary %}<a href="{{ primary.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}
+        </h2>
+        <p class="card-text">{{ p.summary }}</p>
+        {% if p.tags %}
+          <ul class="tags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+        {% endif %}
+        {% if p.links %}
+          <p class="card-links">
+            {% for l in p.links %}<a href="{{ l.url }}">{{ l.label }} <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>{% endfor %}
+          </p>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+<p class="more">More experiments and forks on <a href="https://github.com/arunsingh">GitHub &rarr;</a></p>

@@ -1,0 +1,49 @@
+---
+layout: page
+title: writing
+permalink: /writing/
+description: Essays on AI infrastructure, reliability and systems — on Medium, in the Dyota newsletter, and here.
+---
+{% if site.posts.size > 0 %}
+<section class="section">
+  <h2 class="section-title">on this site</h2>
+  <ul class="entries">
+    {% for post in site.posts %}
+      <li>
+        <span class="entry-date mono">{{ post.date | date: '%b %-d, %Y' }}</span>
+        <a class="entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<div class="writing-grid">
+  <section class="section">
+    <h2 class="section-title"><i class="fa-brands fa-medium" aria-hidden="true"></i> medium</h2>
+    <ol class="entries entries-blurb">
+      {% for w in site.data.writing.medium %}
+        <li>
+          <a class="entry-title" href="{{ w.url }}">{{ w.title }}</a>
+          <span class="entry-date mono">{{ w.date | date: '%b %-d, %Y' }}</span>
+          <p class="entry-blurb">{{ w.blurb }}</p>
+        </li>
+      {% endfor %}
+    </ol>
+    <p class="more"><a href="https://medium.com/@aruns89">follow on Medium &rarr;</a></p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><i class="fa-solid fa-bookmark" aria-hidden="true"></i> dyota newsletter</h2>
+    <ol class="entries entries-blurb">
+      {% for w in site.data.writing.substack %}
+        <li>
+          <a class="entry-title" href="{{ w.url }}">{{ w.title }}</a>
+          <span class="entry-date mono">{{ w.date | date: '%b %-d, %Y' }}</span>
+          <p class="entry-blurb">{{ w.blurb }}</p>
+        </li>
+      {% endfor %}
+    </ol>
+    <p class="more"><a href="https://dyota.substack.com">subscribe on Substack &rarr;</a></p>
+  </section>
+</div>

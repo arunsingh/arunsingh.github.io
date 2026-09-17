@@ -1,0 +1,7 @@
+<ul class="socials" aria-label="Elsewhere">
+  {% for s in site.data.socials %}
+    {% assign href = s.url %}
+    {% if href contains '://' or href contains 'mailto:' %}{% else %}{% assign href = s.url | relative_url %}{% endif %}
+    <li><a href="{{ href }}" title="{{ s.name }}" aria-label="{{ s.name }}"{% if href contains '://' %} rel="me noopener" target="_blank"{% endif %}><i class="{{ s.icon }}" aria-hidden="true"></i></a></li>
+  {% endfor %}
+</ul>

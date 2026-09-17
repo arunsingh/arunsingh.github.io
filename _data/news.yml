@@ -1,0 +1,23 @@
+# Newest first. `text` supports Markdown.
+- date: 2026-09-12
+  text: Published the three-part **Inside AI Infrastructure** series on Medium — [the hardware](https://medium.com/@aruns89/inside-ai-infrastructure-part-1-the-hardware-cd0e0119b817), [the request](https://medium.com/@aruns89/inside-ai-infrastructure-part-2-the-request-e6d777a13e31) and [the fleet](https://medium.com/@aruns89/inside-ai-infrastructure-part-3-the-fleet-3d89a13978e0).
+- date: 2026-08-21
+  text: Proposed deferred poll timeouts for **Apache Iggy** message streaming ([#3470](https://github.com/apache/iggy/issues/3470), [#3948](https://github.com/apache/iggy/pull/3948)).
+- date: 2026-06-06
+  text: Merged [cilium/ebpf#2033](https://github.com/cilium/ebpf/pull/2033) — expose a syscall wrapper symbol helper for `link`.
+- date: 2026-05-28
+  text: Merged [cilium/ebpf#2018](https://github.com/cilium/ebpf/pull/2018) (deferred batch API probe) and reported several BTF/ELF parser hardening issues.
+- date: 2026-05-29
+  text: Two PRs merged into **Apache Iggy** — connector liveness tests ([#3377](https://github.com/apache/iggy/pull/3377)) and docs ([#3366](https://github.com/apache/iggy/pull/3366)).
+- date: 2026-04-16
+  text: Launched **[Korrela DeployIQ](https://korrela-deployiq.vercel.app/)** — GPU deployments, decided in 60 seconds.
+- date: 2026-03-12
+  text: "Wrote [Why Your RAM Bill Is Exploding](https://dyota.substack.com/p/why-your-ram-bill-is-exploding-the) — the hidden hyperscale AI infrastructure tax."
+- date: 2026-02-01
+  text: Started the **Public Leadership Credential** at Harvard Kennedy School.
+- date: 2025-06-01
+  text: Certified in **NVIDIA AI Infrastructure and Operations**.
+- date: 2022-11-01
+  text: Joined **Godspeed** to lead SRE, production AI infrastructure and platform engineering.
+- date: 2018-03-01
+  text: Founded **GDG Cloud Bangalore**, now a 10,000+ member community.

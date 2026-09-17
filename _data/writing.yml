@@ -1,0 +1,84 @@
+# Selected writing. `source` must be medium or substack. Newest first within each source.
+medium:
+  - title: "Inside AI Infrastructure, Part 3: The Fleet"
+    url: https://medium.com/@aruns89/inside-ai-infrastructure-part-3-the-fleet-3d89a13978e0
+    date: 2026-09-12
+    blurb: Sharding, why round-robin routing is actively harmful, llm-d on Kubernetes, and what it takes to operate.
+  - title: "Inside AI Infrastructure, Part 2: The Request"
+    url: https://medium.com/@aruns89/inside-ai-infrastructure-part-2-the-request-e6d777a13e31
+    date: 2026-09-11
+    blurb: Prefill, decode, the KV cache, and the arithmetic that decides how many users fit on one GPU.
+  - title: "Inside AI Infrastructure, Part 1: The Hardware"
+    url: https://medium.com/@aruns89/inside-ai-infrastructure-part-1-the-hardware-cd0e0119b817
+    date: 2026-09-11
+    blurb: Why a GPU is fast, why your laptop isn't, and why the whole thing turns out to be a memory problem.
+  - title: "Applied AI Realms Infrastructure: Scaling & De-scaling LLM Workloads with Flatcar — Book Series 3"
+    url: https://medium.com/@aruns89/book-series-3-applied-ai-realms-infrastructure-scaling-de-scaling-llm-workloads-with-flatcar-bdf8582a81d2
+    date: 2025-10-03
+    blurb: Third instalment of the Applied AI Realms infrastructure book series.
+  - title: "Applied AI Realms Infrastructure: Scaling & De-scaling LLM Workloads with Flatcar — Book Series 2"
+    url: https://medium.com/@aruns89/book-series-2-applied-ai-realms-infrastructure-scaling-de-scaling-llm-workloads-with-flatcar-05dde771add1
+    date: 2025-04-29
+    blurb: Second instalment of the Applied AI Realms infrastructure book series.
+  - title: "Applied AI Realms Infrastructure: Scaling & De-scaling LLM Workloads with Flatcar — Book Series 1"
+    url: https://medium.com/@aruns89/ai-realms-infra-scaling-de-scaling-llm-workloads-with-flatcar-mlops-761492cdbfe4
+    date: 2025-04-24
+    blurb: Scaling LLM workloads up and down on Flatcar Container Linux with MLOps practices.
+  - title: Architecture for Unified Networking & Identity Across Clouds for Kubernetes Infrastructure
+    url: https://medium.com/@aruns89/architecture-for-unified-networking-identity-across-clouds-for-kubernetes-infrastructure-6e0d060ddf40
+    date: 2025-03-01
+    blurb: One network and identity plane for Kubernetes across multiple clouds.
+  - title: "Breaking Down the Data Silos: How Lakehouses Unite Warehouses and Data Lakes"
+    url: https://medium.com/@aruns89/breaking-down-the-data-silos-how-lakehouses-unite-warehouses-and-data-lakes-09617e4afbea
+    date: 2025-02-25
+    blurb: Where the lakehouse pattern fits between warehouses and data lakes.
+  - title: "Kubernetes Cost Optimization: The Adidas Approach to Cutting Kubernetes Costs in Half"
+    url: https://medium.com/@aruns89/kubernetes-cost-optimization-the-adidas-approach-to-cutting-kubernetes-costs-in-halfs-a53f27af63ea
+    date: 2025-01-12
+    blurb: A case study in halving Kubernetes spend.
+  - title: "Unlocking Python's Potential: Tracking GIL Impact with eBPF"
+    url: https://medium.com/@aruns89/unlocking-pythons-potential-tracking-gil-impact-with-ebpf-4ad8242400b2
+    date: 2024-08-26
+    blurb: Measuring Global Interpreter Lock contention with eBPF instrumentation.
+
+substack:
+  - title: "Proactive Incident Management: Achieving SLA and SLO Success with Tetragon in Kubernetes"
+    url: https://dyota.substack.com/p/proactive-incident-management-achieving
+    date: 2024-08-16
+    blurb: Tetragon as Kubernetes-aware security observability and runtime enforcement.
+  - title: DGX Kubernetes AI Infrastructure powering Zero-Hour Well Decisions
+    url: https://dyota.substack.com/p/dgx-kubernetes-ai-infrastructure
+    date: 2025-06-30
+    blurb: DGX-backed Kubernetes infrastructure for time-critical energy decisions.
+  - title: "AWS Case Study: Netflix's Automated Tagging Strategy for Cost Optimization"
+    url: https://dyota.substack.com/p/aws-case-study-netflixs-automated
+    date: 2024-10-30
+    blurb: Resource tagging as the foundation of cloud cost control.
+  - title: DGX Kubernetes Infrastructure Saving Finance Regtech Compliances
+    url: https://dyota.substack.com/p/dgx-kubernetes-infrastructure-saving
+    date: 2025-07-17
+    blurb: From CSV chaos to commit IDs — Git-style data branching for regulatory work.
+  - title: "Why Your RAM Bill Is Exploding: The Hidden Hyperscale AI Infrastructure Tax"
+    url: https://dyota.substack.com/p/why-your-ram-bill-is-exploding-the
+    date: 2026-03-12
+    blurb: AI infrastructure GPU economics and the memory tax.
+  - title: "Research Paper Library: How Machines Learn to Read — Inside Retrieval-Augmented Generation"
+    url: https://dyota.substack.com/p/research-paper-library-series-how
+    date: 2025-10-29
+    blurb: From memory to mastery — how RAG powers the next generation.
+  - title: "SRE Deep Dive: Troubleshooting Kubernetes Container Issues in Real-Time Fraud Detection"
+    url: https://dyota.substack.com/p/sre-deep-dive-troubleshooting-kubernetes
+    date: 2025-02-27
+    blurb: Preventing production downtime with root cause analysis in Kubernetes.
+  - title: "Sidecar Pattern Case Study: AI Realm Infrastructure leveraging Quantum Computing"
+    url: https://dyota.substack.com/p/case-study-ai-realm-infrastructure
+    date: 2025-04-24
+    blurb: Quantum sidecars as a software design pattern for trading systems.
+  - title: "SRE Incident Management: The CUDA Misfire"
+    url: https://dyota.substack.com/p/sre-incident-management-real-world
+    date: 2025-04-25
+    blurb: When auto-updates attack — anatomy of a 32-GPU training failure.
+  - title: "Engineering Leadership: Resolving Conflicts Through Collaborative Alignment"
+    url: https://dyota.substack.com/p/engineering-leadership-resolving
+    date: 2024-12-11
+    blurb: Engineering management through seeking collaborative alignment.

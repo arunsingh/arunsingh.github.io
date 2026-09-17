@@ -1,0 +1,83 @@
+---
+layout: page
+title: cv
+permalink: /cv/
+---
+{% assign cv = site.data.cv %}
+{% assign pdf_path = '/assets/pdf/Arun_Kumar_Singh_CV.pdf' %}
+{% assign has_pdf = false %}
+{% for f in site.static_files %}{% if f.path == pdf_path %}{% assign has_pdf = true %}{% endif %}{% endfor %}
+
+<div class="cv-top">
+  <p class="page-desc">{{ cv.summary }}</p>
+  {% if has_pdf %}
+    <a class="button" href="{{ pdf_path | relative_url }}"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download PDF</a>
+  {% endif %}
+</div>
+
+<section class="section">
+  <h2 class="section-title">experience</h2>
+  <ol class="cv-list">
+    {% for job in cv.experience %}
+      <li class="cv-item">
+        <div class="cv-when mono">{{ job.dates }}<br><span class="muted">{{ job.location }}</span></div>
+        <div class="cv-what">
+          <h3>{{ job.org }}</h3>
+          <p class="cv-role">{{ job.role }}{% if job.meta %} <span class="muted">· {{ job.meta }}</span>{% endif %}</p>
+          {% if job.bullets %}
+            <ul>{% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="section">
+  <h2 class="section-title">education</h2>
+  <ol class="cv-list">
+    {% for e in cv.education %}
+      <li class="cv-item">
+        <div class="cv-when mono">{{ e.dates }}</div>
+        <div class="cv-what"><h3>{{ e.school }}</h3><p class="cv-role">{{ e.degree }}</p></div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="section">
+  <h2 class="section-title">talks &amp; community</h2>
+  <ol class="cv-list">
+    {% for t in cv.talks %}
+      <li class="cv-item">
+        <div class="cv-when mono">{{ t.date }}</div>
+        <div class="cv-what">
+          <h3>{% if t.url %}<a href="{{ t.url }}">{{ t.title }}</a>{% else %}{{ t.title }}{% endif %}</h3>
+          <p class="cv-role">{{ t.event }}</p>
+        </div>
+      </li>
+    {% endfor %}
+    {% for c in cv.community %}
+      <li class="cv-item">
+        <div class="cv-when mono">{{ c.dates }}</div>
+        <div class="cv-what"><h3>{{ c.title }}</h3><p class="cv-role">{{ c.role }}</p><p>{{ c.text }}</p></div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="section">
+  <h2 class="section-title">skills</h2>
+  <dl class="skills">
+    {% for s in cv.skills %}
+      <dt>{{ s.group }}</dt><dd>{{ s.items }}</dd>
+    {% endfor %}
+  </dl>
+</section>
+
+<section class="section">
+  <h2 class="section-title">certifications</h2>
+  <ul class="plain-list">
+    {% for c in cv.certifications %}<li>{{ c }}</li>{% endfor %}
+  </ul>
+</section>

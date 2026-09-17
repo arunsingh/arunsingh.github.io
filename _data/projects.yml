@@ -1,0 +1,77 @@
+# category: venture | platform | open-source | research
+# image: path under /assets/img/projects/ (SVG or PNG/JPG — replace with screenshots anytime)
+# links: optional list of {label, url}
+- title: Godquantum Systems Labs
+  category: venture
+  years: Founder & CTO
+  image: godquantum.svg
+  summary: Full-stack fault-tolerant quantum computing platform — QubitEngine, QubitFabrica and QubitHub — for energy, finance, pharma, logistics and AI infrastructure.
+  tags: [quantum, QAOA, Qiskit, platform]
+  links:
+    - label: godquantum.tech
+      url: https://godquantum.tech
+    - label: quantum-sidecar examples
+      url: https://github.com/arunsingh/quantum-sidecar-examples
+
+- title: Korrela DeployIQ
+  category: venture
+  years: 2026
+  image: deployiq.svg
+  summary: Autonomous verification for GPU deployments — specialised AI agents reach a consensus go/no-go in under 60 seconds, with cost normalisation across seven clouds and a full audit trail.
+  tags: [agentic AI, GPU, deployment safety]
+  links:
+    - label: live site
+      url: https://korrela-deployiq.vercel.app/
+    - label: docs
+      url: https://github.com/arunsingh/korrela-deployiq-docs
+
+- title: Nautobot Agentic AI
+  category: platform
+  years: Godspeed
+  image: nautobot.svg
+  summary: LLM-based agentic platform for asset lifecycle management across on-prem and cloud, wired into dev tooling, observability and ProdOps — a 30× developer-productivity uplift through an internal developer platform.
+  tags: [agentic AI, Nautobot, IDP, multi-cloud]
+
+- title: Smart Inferencing Engine
+  category: platform
+  years: Godspeed
+  image: inference.svg
+  summary: Intelligence engine for token workloads — smart queues, a dynamic model router, custom model parameters and tuned nodes on multi-DC GPU clusters built for LLM training and inference.
+  tags: [LLM inference, GPU scheduling, routing]
+
+- title: Industrial IoT Monitoring Platform
+  category: platform
+  years: MachinePulse · 2017 – 2019
+  image: iot.svg
+  summary: On-prem monitoring for the solar industry, re-architected to event-driven pipelines — scaled 8× to 3 million writes/sec across 700+ installations, hardened with chaos engineering.
+  tags: [IIoT, Kafka, event-driven, LitmusChaos]
+
+- title: eBPF, Streaming & Cloud-Native OSS
+  category: open-source
+  years: 2022 – present
+  image: oss.svg
+  summary: Merged patches to cilium/ebpf and Apache Iggy, parser-hardening bug reports for BTF/ELF loading, and issue triage across Apache Airflow, Cilium and Linkerd.
+  tags: [eBPF, Go, Rust, Kubernetes]
+  links:
+    - label: cilium/ebpf#2033
+      url: https://github.com/cilium/ebpf/pull/2033
+    - label: cilium/ebpf#2018
+      url: https://github.com/cilium/ebpf/pull/2018
+    - label: apache/iggy#3377
+      url: https://github.com/apache/iggy/pull/3377
+    - label: apache/iggy#3366
+      url: https://github.com/apache/iggy/pull/3366
+
+- title: Elongpower
+  category: venture
+  years: 2021 – 2022
+  image: elongpower.svg
+  summary: Inductive-charging EV mobility venture — a hardware prototype built through contract manufacturing in Southeast Asia, with a software platform for battery observability and OEM integration.
+  tags: [EV, hardware, battery telemetry]
+
+- title: Multitouch Surface Table
+  category: research
+  years: IIT Delhi · 2010 – 2015
+  image: surface.svg
+  summary: A 3D interactive table built from a hacked TFT panel and acrylic mask, zoomable UIs over the TUIO protocol in Python (PyMT) and Java (MT4j), and a 100-inch fiducial-marked interactive wall.
+  tags: [HCI, TUIO, computer vision]
