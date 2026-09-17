@@ -40,15 +40,40 @@ social:
 nav:
   - title: about
     url: /
+  - title: essays
+    url: /essays/
+  - title: blog
+    url: /writing/
+  - title: stories
+    url: /stories/
+  - title: books
+    url: /books/
+  - title: code
+    url: /code/
   - title: projects
     url: /projects/
-  - title: writing
-    url: /writing/
+  - title: pubs
+    url: /publications/
   - title: cv
     url: /cv/
 
+# Collections — essays and poems you write here, in Markdown
+collections:
+  essays:
+    output: true
+    permalink: /essays/:title/
+  poems:
+    output: true
+    permalink: /stories/:title/
+
+defaults:
+  - scope: { path: "", type: essays }
+    values: { layout: essay }
+  - scope: { path: "", type: poems }
+    values: { layout: poem }
+
 # Homepage knobs
-news_limit: 8
+news_limit: 6
 latest_writing_limit: 5
 
 # Build

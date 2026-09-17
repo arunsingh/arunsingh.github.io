@@ -32,4 +32,16 @@
   chips.forEach(function (c) {
     c.addEventListener('click', function () { apply(c.getAttribute('data-filter')); });
   });
+
+  // ---- publication abs/bib toggles ----
+  document.querySelectorAll('.pub-btn[data-toggle]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = document.getElementById(b.getAttribute('data-toggle'));
+      if (!el) return;
+      var open = el.hidden;
+      el.hidden = !open;
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      b.classList.toggle('is-active', open);
+    });
+  });
 })();

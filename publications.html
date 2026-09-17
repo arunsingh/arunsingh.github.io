@@ -1,0 +1,46 @@
+---
+layout: page
+title: "Publications, Preprints, and Workshop Papers"
+nav_title: pubs
+permalink: /publications/
+description: "Publications, preprints, and workshop papers by Arun Kumar Singh."
+intro: 'Publications, preprints, and workshop papers. Also on <a href="https://scholar.google.com/citations?hl=en&amp;user=ZMVBZXYAAAAJ">Google Scholar</a>.'
+---
+{% assign groups = "publications|Publications,preprints|Preprints,workshop|Workshop Papers" | split: "," %}
+{% for g in groups %}
+  {% assign parts = g | split: "|" %}
+  {% assign key = parts[0] %}
+  {% assign entries = site.data.publications[key] %}
+  <section class="section{% if forloop.first %} section-first{% endif %}" id="{{ key }}">
+    <h2 class="section-title">{{ parts[1] }}</h2>
+    {% if entries.size > 0 %}
+      <ol class="pubs">
+        {% for p in entries %}
+          <li class="pub" id="{{ p.key }}">
+            {% if p.thumb %}
+              <a class="pub-thumb" href="{{ p.pdf | default: p.url | relative_url }}" tabindex="-1" aria-hidden="true">
+                <img src="{{ p.thumb | relative_url }}" alt="" loading="lazy" width="120" height="155">
+              </a>
+            {% endif %}
+            <div class="pub-body">
+              <p class="pub-badge mono">{{ p.venue }} · {{ p.year }}</p>
+              <h3 class="pub-title">{{ p.title }}</h3>
+              <p class="pub-authors">{{ p.authors }}{% if p.affiliation %} <span class="muted">· {{ p.affiliation }}</span>{% endif %}</p>
+              <p class="pub-links">
+                {% if p.abstract %}<button type="button" class="pub-btn" data-toggle="abs-{{ p.key }}" aria-expanded="false">abs</button>{% endif %}
+                {% if p.pdf %}<a class="pub-btn" href="{{ p.pdf | relative_url }}">pdf</a>{% endif %}
+                {% if p.url %}<a class="pub-btn" href="{{ p.url }}">html</a>{% endif %}
+                {% if p.code %}<a class="pub-btn" href="{{ p.code }}">code</a>{% endif %}
+                {% if p.bibtex %}<button type="button" class="pub-btn" data-toggle="bib-{{ p.key }}" aria-expanded="false">bib</button>{% endif %}
+              </p>
+              {% if p.abstract %}<div class="pub-extra" id="abs-{{ p.key }}" hidden><p>{{ p.abstract }}</p></div>{% endif %}
+              {% if p.bibtex %}<div class="pub-extra" id="bib-{{ p.key }}" hidden><pre><code>{{ p.bibtex | xml_escape }}</code></pre></div>{% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      <p class="empty-note">Coming soon.</p>
+    {% endif %}
+  </section>
+{% endfor %}

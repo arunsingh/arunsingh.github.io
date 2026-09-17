@@ -36,15 +36,34 @@ bundle exec jekyll serve --livereload   # http://localhost:4000
 
 | What | File |
 |---|---|
-| Name, tagline, location, nav | `_config.yml` |
+| Name, tagline, location, nav order | `_config.yml` |
 | Bio, "at a glance" numbers | `index.html` |
 | News feed | `_data/news.yml` |
-| Projects (cards, links, tags) | `_data/projects.yml` and images in `assets/img/projects/` |
-| Medium and Substack lists | `_data/writing.yml` |
-| CV, talks, skills, certifications | `_data/cv.yml` |
+| **Essays** (Paul Graham style) | new file in `_essays/YYYY-MM-DD-slug.md` — copy `_essays/2026-09-17-essay-template.md` |
+| Essays published elsewhere | `_data/essays_elsewhere.yml` |
+| **Poems & short stories** — WordPress links | `_data/stories.yml` |
+| Poems & stories written on this site | new file in `_poems/YYYY-MM-DD-slug.md` with `kind: poem` or `kind: story` |
+| **Books** (series + chapters, bookshelf) | `_data/books.yml` |
+| **Code** (OSS contributions, personal repos) | `_data/code.yml` |
+| **Publications / preprints / workshop papers** | `_data/publications.yml` (PDFs in `assets/pdf/`, thumbnails in `assets/img/pubs/`) |
+| Projects (cards) | `_data/projects.yml` + `assets/img/projects/` |
+| Blog lists (Medium, Substack) | `_data/writing.yml` |
+| CV, talks, skills, certifications | `_data/cv.yml`; PDF at `assets/pdf/Arun_Kumar_Singh_CV.pdf` |
 | Social icons | `_data/socials.yml` |
 | Colours and typography | top of `assets/css/main.css` (`:root` tokens) |
-| Profile photo | `assets/img/prof_pic.jpg` |
-| Native blog posts | add `_posts/YYYY-MM-DD-title.md` with `layout: post` |
 
-**CV PDF:** save a copy **without your phone number** as `assets/pdf/Arun_Kumar_Singh_CV.pdf`. A "Download PDF" button shows up on /cv/ automatically.
+**Search** indexes everything above automatically (`search.json`). Press `/` or `Ctrl/⌘ K` on any page.
+
+### Writing an essay
+```markdown
+---
+title: How to Do Great Infrastructure Work
+date: 2026-10-01
+description: One sentence for search results and link previews.
+---
+Paragraphs, no subheadings. A footnote looks like this.[^1]
+
+[^1]: Notes are collected at the end automatically.
+```
+
+**CV PDF:** replace `assets/pdf/Arun_Kumar_Singh_CV.pdf` to update the download on /cv/ (the current copy has the phone number and street address removed).

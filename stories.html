@@ -1,0 +1,54 @@
+---
+layout: page
+title: "poems & short stories"
+permalink: /stories/
+description: "Fiction and verse in English and Hindi — mostly about love, distance and the people we become."
+intro: 'Fiction and verse in English and Hindi — mostly about love, distance and the people we become. Most live on my <a href="https://arunksingh.wordpress.com">WordPress blog</a>.'
+---
+{% assign native = site.poems | where_exp: "p", "p.published != false" | sort: 'date' | reverse %}
+{% assign poems = site.data.stories | where: 'kind', 'poem' %}
+{% assign stories = site.data.stories | where: 'kind', 'story' %}
+{% assign reflections = site.data.stories | where: 'kind', 'reflection' %}
+
+{% if native.size > 0 %}
+<section class="section section-first">
+  <h2 class="section-title">new here</h2>
+  <ul class="essay-index">
+    {% for p in native %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a><span class="essay-index-date">{{ p.kind | default: 'poem' }} · {{ p.date | date: '%b %Y' }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<div class="two-col">
+  <section class="section section-first">
+    <h2 class="section-title">short stories</h2>
+    <ul class="essay-index essay-index-sm">
+      {% for s in stories %}
+        <li><a href="{{ s.url }}">{{ s.title }}</a><span class="essay-index-date">{{ s.date | date: '%b %Y' }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <div>
+    <section class="section section-first">
+      <h2 class="section-title">poems</h2>
+      <ul class="essay-index essay-index-sm">
+        {% for s in poems %}
+          <li><a href="{{ s.url }}" lang="{% if s.title contains 'यादें' %}hi{% else %}en{% endif %}">{{ s.title }}</a><span class="essay-index-date">{{ s.date | date: '%b %Y' }}</span></li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="section">
+      <h2 class="section-title">reflections</h2>
+      <ul class="essay-index essay-index-sm">
+        {% for s in reflections %}
+          <li><a href="{{ s.url }}">{{ s.title }}</a><span class="essay-index-date">{{ s.date | date: '%b %Y' }}</span></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+</div>
+
+<p class="more">Read everything on <a href="https://arunksingh.wordpress.com">arunksingh.wordpress.com &rarr;</a></p>

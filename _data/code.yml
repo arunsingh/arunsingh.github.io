@@ -1,0 +1,131 @@
+# Open-source contributions. status: merged | open | proposal | reported
+contributions:
+  - project: cilium/ebpf
+    url: https://github.com/cilium/ebpf
+    language: Go
+    about: Pure-Go library to read, modify and load eBPF programs — used by Cilium, Tetragon and much of the eBPF ecosystem.
+    items:
+      - title: "link: expose syscall wrapper symbol helper"
+        url: https://github.com/cilium/ebpf/pull/2033
+        date: 2026-06-06
+        status: merged
+      - title: "ebpf: defer batch API probe for batch lookup"
+        url: https://github.com/cilium/ebpf/pull/2018
+        date: 2026-05-26
+        status: merged
+      - title: "memory: VariablePointer can panic on malformed variable offset"
+        url: https://github.com/cilium/ebpf/issues/2028
+        date: 2026-06-02
+        status: reported
+      - title: "elf: malformed struct_ops DATASEC offset can panic LoadCollectionSpecFromReader"
+        url: https://github.com/cilium/ebpf/issues/2024
+        date: 2026-05-28
+        status: reported
+      - title: "btf: raw BTF parser panics when HdrLen exceeds available header bytes"
+        url: https://github.com/cilium/ebpf/issues/2022
+        date: 2026-05-27
+        status: reported
+
+  - project: apache/iggy
+    url: https://github.com/apache/iggy
+    language: Rust
+    about: Persistent message streaming platform written in Rust, under the Apache Software Foundation.
+    items:
+      - title: "test(connectors): add random source liveness helper"
+        url: https://github.com/apache/iggy/pull/3377
+        date: 2026-05-29
+        status: merged
+      - title: "docs: clarify compression placeholders"
+        url: https://github.com/apache/iggy/pull/3366
+        date: 2026-05-29
+        status: merged
+      - title: "feat: add deferred polling timeout to PollMessages"
+        url: https://github.com/apache/iggy/issues/3470
+        date: 2026-06-14
+        status: open
+      - title: "feat(common): add deferred poll timeout support"
+        url: https://github.com/apache/iggy/pull/3948
+        date: 2026-08-21
+        status: proposal
+      - title: "feat(server): add deferred PollMessages wait timeout"
+        url: https://github.com/apache/iggy/pull/3605
+        date: 2026-07-03
+        status: proposal
+
+  - project: Cilium · Apache Airflow · Linkerd
+    url: https://github.com/cilium/cilium
+    language: Go · Python · Rust
+    about: Issue triage and review participation since 2022.
+    items:
+      - title: "Policy status operator misses disallowed namespace endpoint selector"
+        url: https://github.com/cilium/cilium/issues/45231
+        date: 2026-04-08
+        status: discussion
+
+# Personal projects on github.com/arunsingh
+personal:
+  - name: pubkit
+    url: https://github.com/arunsingh/pubkit
+    language: Python
+    year: 2026
+    about: Publish one source to many platforms, safely — Medium, Substack, X, Dev.to and Hashnode.
+  - name: korrela-deployiq-docs
+    url: https://github.com/arunsingh/korrela-deployiq-docs
+    language: Docusaurus
+    year: 2026
+    about: Documentation site for Korrela DeployIQ, the GPU deployment verification platform.
+  - name: linux_page_cache-lab
+    url: https://github.com/arunsingh/linux_page_cache-lab
+    language: C
+    year: 2026
+    about: Hands-on labs on Linux OS internals, starting with the page cache.
+  - name: container-from-scratch
+    url: https://github.com/arunsingh/container-from-scratch
+    language: Linux
+    year: 2026
+    about: Building a container runtime from namespaces and cgroups up.
+  - name: cdc-dbzium-kafka
+    url: https://github.com/arunsingh/cdc-dbzium-kafka
+    language: TypeScript
+    year: 2026
+    about: System-design proof of concept for change-data-capture events with Debezium and Kafka.
+  - name: pdf-table-extractor
+    url: https://github.com/arunsingh/pdf-table-extractor
+    language: Python
+    year: 2025
+    about: Document-intelligence tool that extracts tables from image-based PDFs.
+  - name: quantum-sidecar-examples
+    url: https://github.com/arunsingh/quantum-sidecar-examples
+    language: Python
+    year: 2025
+    about: The sidecar design pattern applied to quantum computing workloads.
+  - name: submarine_cables_tooling
+    url: https://github.com/arunsingh/submarine_cables_tooling
+    language: Python
+    year: 2025
+    about: AIOps tooling for submarine cable data.
+  - name: command-terminal-shell-rust
+    url: https://github.com/arunsingh/command-terminal-shell-rust
+    language: Rust
+    year: 2024
+    about: A command shell built in Rust.
+  - name: query_tool_statuspage
+    url: https://github.com/arunsingh/query_tool_statuspage
+    language: Python
+    year: 2024
+    about: Queries status pages across thousands of servers and produces fleet health reports.
+  - name: linux-baremetal-ops
+    url: https://github.com/arunsingh/linux-baremetal-ops
+    language: Python · Go
+    year: 2024
+    about: Terraform-like tooling for bare-metal Linux deployment and network device provisioning.
+  - name: incydent-cmdr-bot
+    url: https://github.com/arunsingh/incydent-cmdr-bot
+    language: Python
+    year: 2023
+    about: Incident-commander bot integrating Slack and PagerDuty alerting.
+  - name: playbox-ott
+    url: https://github.com/arunsingh/playbox-ott
+    language: JavaScript
+    year: 2019
+    about: A complete OTT streaming platform, along the lines of Netflix or Hotstar.

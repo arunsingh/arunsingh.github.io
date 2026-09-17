@@ -1,0 +1,40 @@
+# Publications, preprints and workshop papers.
+# Each section lists entries newest first. Fields: title, authors, venue, year, pdf, url, code, abstract, bibtex, thumb
+publications: []
+
+preprints:
+  - key: singh2026aurora
+    title: "Aurora: A Hybrid Quantum Algorithm for Fuel-Optimal Aircraft Tail Assignment via Superposition, Entanglement, and Interference"
+    authors: "<strong>Arun Singh</strong>"
+    affiliation: Godquantum Systems Labs
+    venue: Preprint
+    year: 2026
+    pdf: /assets/pdf/Singh_2026_Aurora_hybrid_quantum_tail_assignment.pdf
+    thumb: /assets/img/pubs/aurora.jpg
+    tags: [quantum optimization, QAOA, amplitude estimation, aviation]
+    abstract: >-
+      Fuel is the largest controllable cost in commercial aviation, and the decision of which physical
+      aircraft flies each leg of a network — the tail assignment problem — is an NP-hard combinatorial
+      optimization whose feasible space grows exponentially in the number of candidate aircraft rotations.
+      Aurora is a hybrid quantum–classical algorithm that couples three quantum kernels around a classical
+      decomposition and variational loop. It casts tail assignment as an exact-cover QUBO, maps it to an
+      Ising cost Hamiltonian, and solves it with QAOA using a constraint-preserving XY mixer. Two auxiliary
+      kernels carry provable quadratic speedups: quantum amplitude estimation prices each rotation by its
+      wind-dependent expected fuel burn in O(1/ε) rather than Monte Carlo's O(1/ε²), and amplitude
+      amplification prepares exact-cover-feasible superpositions in O(√(N/M)) rather than O(N/M).
+      Noiseless statevector simulations on synthetic exact-cover instances show layerwise-optimized QAOA
+      improving the mean approximation ratio from 0.88 at p=1 to 0.95 at p=8, with the optimum-sampling
+      probability rising roughly ninefold. The paper separates the proven quadratic advantages of the
+      auxiliary kernels from the empirical, instance-dependent advantage of the QAOA optimizer; all
+      quantitative results are simulation-derived or modeled projections.
+    bibtex: |-
+      @misc{singh2026aurora,
+        title  = {Aurora: A Hybrid Quantum Algorithm for Fuel-Optimal Aircraft Tail Assignment
+                  via Superposition, Entanglement, and Interference},
+        author = {Singh, Arun},
+        year   = {2026},
+        note   = {Preprint, Godquantum Systems Labs},
+        url    = {https://aruns.me/assets/pdf/Singh_2026_Aurora_hybrid_quantum_tail_assignment.pdf}
+      }
+
+workshop: []

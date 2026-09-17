@@ -1,23 +1,24 @@
 <header class="site-header">
   <nav class="nav container" aria-label="Main">
-    <a class="brand" href="{{ '/' | relative_url }}">
-      {% if page.url != '/' %}<span class="brand-first">{{ site.first_name }}</span> {{ site.last_name }}{% else %}<span class="brand-mark" aria-hidden="true"></span><span class="sr-only">Home</span>{% endif %}
-    </a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
-    <label for="nav-toggle" class="nav-burger" aria-hidden="true"><i class="fa-solid fa-bars"></i></label>
-    <ul class="nav-links">
-      {% for item in site.nav %}
-        {% assign active = false %}
-        {% if item.url == '/' and page.url == '/' %}{% assign active = true %}{% endif %}
-        {% if item.url != '/' and page.url contains item.url %}{% assign active = true %}{% endif %}
-        <li><a href="{{ item.url | relative_url }}"{% if active %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a></li>
-      {% endfor %}
-      <li>
-        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
-          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
-          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
-        </button>
-      </li>
-    </ul>
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-first">{{ site.first_name }}</span> {{ site.last_name }}</a>
+    <div class="nav-right">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <ul class="nav-links">
+        {% for item in site.nav %}
+          {% assign active = false %}
+          {% if item.url == '/' and page.url == '/' %}{% assign active = true %}{% endif %}
+          {% if item.url != '/' and page.url contains item.url %}{% assign active = true %}{% endif %}
+          <li><a href="{{ item.url | relative_url }}"{% if active %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <button class="icon-btn search-open" type="button" aria-label="Search (press / or Ctrl K)" title="Search  ( / )">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><kbd class="kbd-hint">/</kbd>
+      </button>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+        <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+      </button>
+      <label for="nav-toggle" class="icon-btn nav-burger" aria-hidden="true"><i class="fa-solid fa-bars"></i></label>
+    </div>
   </nav>
 </header>

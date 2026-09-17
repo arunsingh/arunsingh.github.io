@@ -1,0 +1,34 @@
+---
+layout: page
+title: essays
+permalink: /essays/
+description: Longer pieces on engineering, building things and how to think about them.
+---
+{% assign essays = site.essays | where_exp: "e", "e.published != false" | sort: 'date' | reverse %}
+
+{% if essays.size > 0 %}
+<ul class="essay-index">
+  {% for e in essays %}
+    <li>
+      <a href="{{ e.url | relative_url }}">{{ e.title }}</a>
+      <span class="essay-index-date">{{ e.date | date: '%b %Y' }}</span>
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty-note">The first essays are being written. In the meantime, the <a href="{{ '/writing/' | relative_url }}">blog</a> has shorter technical pieces.</p>
+{% endif %}
+
+{% if site.data.essays_elsewhere.size > 0 %}
+<section class="section">
+  <h2 class="section-title">elsewhere</h2>
+  <ul class="essay-index essay-index-sm">
+    {% for e in site.data.essays_elsewhere %}
+      <li>
+        <a href="{{ e.url }}">{{ e.title }}</a>
+        <span class="essay-index-date">{{ e.date | date: '%b %Y' }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

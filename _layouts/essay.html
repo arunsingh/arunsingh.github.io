@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article class="essay">
+  <p class="essay-back"><a href="{{ '/essays/' | relative_url }}">&larr; essays</a></p>
+  <h1 class="essay-title">{{ page.title }}</h1>
+  <p class="essay-date">{{ page.date | date: '%B %Y' }}</p>
+  <div class="essay-body">
+    {{ content }}
+  </div>
+</article>

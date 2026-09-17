@@ -1,0 +1,39 @@
+---
+layout: page
+title: code
+permalink: /code/
+description: "Open-source contributions and things I have built on the side."
+intro: 'Open-source contributions and things I''ve built on the side. Everything lives on <a href="https://github.com/arunsingh">github.com/arunsingh</a>.'
+---
+<section class="section section-first">
+  <h2 class="section-title">open source</h2>
+  {% for c in site.data.code.contributions %}
+    <div class="oss">
+      <h3 class="oss-name"><a href="{{ c.url }}">{{ c.project }}</a> <span class="lang mono">{{ c.language }}</span></h3>
+      <p class="oss-about">{{ c.about }}</p>
+      <ul class="oss-items">
+        {% for i in c.items %}
+          <li>
+            <span class="status status-{{ i.status }} mono">{{ i.status }}</span>
+            <a href="{{ i.url }}"><code>{{ i.title }}</code></a>
+            <span class="oss-ref mono muted">#{{ i.url | split: '/' | last }} · {{ i.date | date: '%b %Y' }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="section">
+  <h2 class="section-title">personal projects</h2>
+  <ul class="repos">
+    {% for r in site.data.code.personal %}
+      <li>
+        <a class="repo-name mono" href="{{ r.url }}">{{ r.name }}</a>
+        <span class="repo-about">{{ r.about }}</span>
+        <span class="repo-meta mono muted">{{ r.language }} · {{ r.year }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <p class="more"><a href="https://github.com/arunsingh?tab=repositories">all repositories &rarr;</a></p>
+</section>

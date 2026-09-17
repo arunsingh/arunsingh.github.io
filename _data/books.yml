@@ -1,0 +1,40 @@
+# Technical books & long-form series. status: writing | published | draft
+series:
+  - title: Applied AI Realms Infrastructure
+    subtitle: Scaling & de-scaling LLM workloads with Flatcar and MLOps
+    status: writing
+    years: 2025 –
+    summary: A book-length series on running LLM workloads on immutable container infrastructure — how to scale them up, wind them down, and keep them reliable in between.
+    chapters:
+      - title: Part 1
+        url: https://medium.com/@aruns89/ai-realms-infra-scaling-de-scaling-llm-workloads-with-flatcar-mlops-761492cdbfe4
+        date: 2025-04-24
+      - title: Part 2
+        url: https://medium.com/@aruns89/book-series-2-applied-ai-realms-infrastructure-scaling-de-scaling-llm-workloads-with-flatcar-05dde771add1
+        date: 2025-04-29
+      - title: Part 3
+        url: https://medium.com/@aruns89/book-series-3-applied-ai-realms-infrastructure-scaling-de-scaling-llm-workloads-with-flatcar-bdf8582a81d2
+        date: 2025-10-03
+
+  - title: Inside AI Infrastructure
+    subtitle: From a single GPU to a serving fleet
+    status: writing
+    years: 2026 –
+    summary: What actually happens between a prompt and a token — GPU memory, prefill and decode, the KV cache, batching, sharding and routing across a fleet.
+    chapters:
+      - title: "Part 1 — The Hardware"
+        url: https://medium.com/@aruns89/inside-ai-infrastructure-part-1-the-hardware-cd0e0119b817
+        date: 2026-09-11
+      - title: "Part 2 — The Request"
+        url: https://medium.com/@aruns89/inside-ai-infrastructure-part-2-the-request-e6d777a13e31
+        date: 2026-09-11
+      - title: "Part 3 — The Fleet"
+        url: https://medium.com/@aruns89/inside-ai-infrastructure-part-3-the-fleet-3d89a13978e0
+        date: 2026-09-12
+
+# Books you recommend. Add entries as:
+#  - title: Designing Data-Intensive Applications
+#    author: Martin Kleppmann
+#    url: https://dataintensive.net
+#    note: one line on why it matters
+bookshelf: []

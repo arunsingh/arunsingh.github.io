@@ -1,0 +1,33 @@
+---
+layout: page
+title: books
+permalink: /books/
+description: Technical books I'm writing in the open, one chapter at a time.
+---
+{% for b in site.data.books.series %}
+<section class="book">
+  <div class="book-spine" aria-hidden="true"><span>{{ b.title }}</span></div>
+  <div class="book-body">
+    <p class="card-kicker mono">{{ b.status }} · {{ b.years }}</p>
+    <h2 class="book-title">{{ b.title }}</h2>
+    <p class="book-sub">{{ b.subtitle }}</p>
+    <p class="book-summary">{{ b.summary }}</p>
+    <ol class="chapters">
+      {% for c in b.chapters %}
+        <li><a href="{{ c.url }}">{{ c.title }}</a> <span class="muted mono">{{ c.date | date: '%b %Y' }}</span></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endfor %}
+
+{% if site.data.books.bookshelf.size > 0 %}
+<section class="section">
+  <h2 class="section-title">bookshelf</h2>
+  <ul class="essay-index essay-index-sm">
+    {% for b in site.data.books.bookshelf %}
+      <li><span><a href="{{ b.url }}">{{ b.title }}</a> <span class="muted">— {{ b.author }}</span>{% if b.note %}<br><span class="muted small">{{ b.note }}</span>{% endif %}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

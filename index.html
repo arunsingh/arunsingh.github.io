@@ -34,10 +34,16 @@ title: about
     <p>
       Right now I lead SRE, production AI infrastructure and platform engineering at
       <strong>Godspeed</strong>, build a full-stack quantum computing platform at
-      <a href="https://godquantum.tech">Godquantum</a>, and contribute to eBPF and streaming
-      open source. I founded <strong>GDG Cloud Bangalore</strong> and write about infrastructure on
-      <a href="https://medium.com/@aruns89">Medium</a> and in the
-      <a href="https://dyota.substack.com">Dyota</a> newsletter.
+      <a href="https://godquantum.tech">Godquantum</a>, and contribute to
+      <a href="{{ '/code/' | relative_url }}">eBPF and streaming open source</a>. I founded
+      <strong>GDG Cloud Bangalore</strong>, write <a href="{{ '/essays/' | relative_url }}">essays</a>
+      and <a href="{{ '/books/' | relative_url }}">technical books</a>, and keep a
+      <a href="{{ '/writing/' | relative_url }}">blog</a> on Medium and in the Dyota newsletter.
+    </p>
+    <p>
+      In my spare time, I enjoy doing sports (mostly running and cycling), traveling, and going on
+      hikes with friends and family. I grew up in India and speak Hindi, English and French — and
+      now and then I write <a href="{{ '/stories/' | relative_url }}">poems and short stories</a>.
     </p>
   </div>
 
@@ -61,18 +67,18 @@ title: about
 
 <section class="section">
   <h2 class="section-title">at a glance</h2>
-  <ul class="stats">
-    <li><strong>16+</strong><span>years in SRE, platform &amp; infrastructure</span></li>
-    <li><strong>120 EB+</strong><span>object storage operated</span></li>
-    <li><strong>12,000+</strong><span>Kubernetes nodes</span></li>
-    <li><strong>80B+</strong><span>events processed per day</span></li>
-    <li><strong>3M/s</strong><span>IoT writes after an 8× re-architecture</span></li>
-    <li><strong>30×</strong><span>developer productivity via an agentic IDP</span></li>
-  </ul>
+  <p class="glance">
+    <span><strong>16+</strong> years in SRE &amp; infrastructure</span>
+    <span><strong>120 EB+</strong> object storage</span>
+    <span><strong>12,000+</strong> Kubernetes nodes</span>
+    <span><strong>80B+</strong> events a day</span>
+    <span><strong>3M/s</strong> IoT writes</span>
+    <span><strong>30×</strong> developer productivity</span>
+  </p>
 </section>
 
 <section class="section">
-  <h2 class="section-title">latest writing</h2>
+  <h2 class="section-title">latest on the blog</h2>
   {% assign all_writing = site.data.writing.medium | concat: site.data.writing.substack | sort: 'date' | reverse %}
   <ul class="entries">
     {% for w in all_writing limit: site.latest_writing_limit %}
@@ -84,7 +90,7 @@ title: about
       </li>
     {% endfor %}
   </ul>
-  <p class="more"><a href="{{ '/writing/' | relative_url }}">all writing &rarr;</a></p>
+  <p class="more"><a href="{{ '/writing/' | relative_url }}">all posts &rarr;</a></p>
 </section>
 
 <section class="section">
