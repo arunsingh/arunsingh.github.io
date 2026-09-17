@@ -30,14 +30,26 @@
     return loading;
   }
 
+  // Short terms (1–2 chars) only match at the start of a word, so "as" finds
+  // "Assignment" but not "infrastructure".
+  function find(hay, t) {
+    if (t.length > 2) return hay.indexOf(t);
+    var i = hay.indexOf(t);
+    while (i !== -1) {
+      if (i === 0 || !/[a-z0-9]/.test(hay.charAt(i - 1))) return i;
+      i = hay.indexOf(t, i + 1);
+    }
+    return -1;
+  }
+
   function score(item, terms) {
     var s = 0;
     for (var i = 0; i < terms.length; i++) {
       var t = terms[i];
-      var ti = item._t.indexOf(t), xi = item._x.indexOf(t);
+      var ti = find(item._t, t), xi = find(item._x, t);
       if (ti === -1 && xi === -1) return 0;           // every term must match somewhere
       if (ti === 0) s += 12;                           // title starts with term
-      else if (ti > 0) s += (item._t.charAt(ti - 1) === ' ' ? 8 : 5);
+      else if (ti > 0) s += (/[a-z0-9]/.test(item._t.charAt(ti - 1)) ? 5 : 8);
       if (xi !== -1) s += 1;
     }
     if (item.k === 'essay' || item.k === 'poem' || item.k === 'story') s += 0.5;
@@ -51,9 +63,9 @@
   function highlight(text, terms) {
     var out = esc(text);
     terms.forEach(function (t) {
-      if (t.length < 2) return;
-      var re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
-      out = out.replace(re, '<mark>$1</mark>');
+      var safe = esc(t).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      var re = t.length > 2 ? new RegExp('(' + safe + ')', 'ig') : new RegExp('(^|[^A-Za-z0-9])(' + safe + ')', 'ig');
+      out = t.length > 2 ? out.replace(re, '<mark>$1</mark>') : out.replace(re, '$1<mark>$2</mark>');
     });
     return out;
   }
@@ -61,7 +73,7 @@
   function snippet(item, terms) {
     if (!item.x || item.x === 'wordpress') return '';
     var x = item.x, lx = norm(x), pos = -1;
-    for (var i = 0; i < terms.length && pos === -1; i++) pos = lx.indexOf(terms[i]);
+    for (var i = 0; i < terms.length && pos === -1; i++) pos = find(lx, terms[i]);
     if (pos === -1) return x.length > 120 ? x.slice(0, 120) + '…' : x;
     var start = Math.max(0, pos - 50);
     return (start > 0 ? '…' : '') + x.slice(start, start + 130) + (start + 130 < x.length ? '…' : '');
