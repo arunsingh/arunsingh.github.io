@@ -114,7 +114,7 @@ main.container { padding-top: 48px; padding-bottom: 80px; min-height: 70vh; }
 .about-name .first { font-weight: 600; }
 .about-tagline { margin: 6px 0 0; font-size: 1rem; color: var(--text); }
 .profile { grid-area: pic; margin: 8px 0 0; }
-.profile img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 1px var(--border); }
+.profile img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--accent-bright); }
 .profile figcaption { margin-top: 14px; font-size: .8rem; color: var(--muted); text-align: center; line-height: 1.5; display: grid; gap: 2px; }
 .bio { grid-area: bio; }
 .bio p { margin: 0 0 1em; }

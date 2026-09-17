@@ -1,6 +1,6 @@
 # aruns.me
 
-Personal site of **Arun Kumar Singh**. It's a Jekyll site inspired by [al-folio](https://github.com/alshedivat/al-folio), with a turquoise, white and charcoal palette and a dark mode. GitHub Pages builds it natively, so it needs no Actions and no custom plugins.
+Personal site of **Arun Singh**. It's a Jekyll site inspired by [al-folio](https://github.com/alshedivat/al-folio), with a turquoise, white and charcoal palette and a dark mode. GitHub Pages builds it natively, so it needs no Actions and no custom plugins.
 
 ## Deploy to GitHub Pages (one time)
 

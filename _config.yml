@@ -1,18 +1,17 @@
 # ---------------------------------------------------------------------------
-#  aruns.me — personal site of Arun Kumar Singh
+#  aruns.me — personal site of Arun Singh
 #  Jekyll site inspired by al-folio (github.com/alshedivat/al-folio).
 #  Builds natively on GitHub Pages — no Actions or custom plugins required.
 # ---------------------------------------------------------------------------
 
-title: Arun Kumar Singh
+title: Arun Singh
 first_name: Arun
-middle_name: Kumar
 last_name: Singh
 tagline: Distinguished Engineer · SRE & AI Infrastructure
 location: San Diego, CA
 email: arunsingh.in@gmail.com
 description: >-
-  Arun Kumar Singh — Distinguished Engineer working on site reliability,
+  Arun Singh — Distinguished Engineer working on site reliability,
   compute & platform infrastructure, GPU clusters for LLM inference, and
   quantum-classical systems.
 keywords: SRE, platform engineering, AI infrastructure, GPU, Kubernetes, quantum computing, distributed systems
@@ -23,13 +22,13 @@ baseurl: ""
 lang: en
 
 author:
-  name: Arun Kumar Singh
+  name: Arun Singh
   email: arunsingh.in@gmail.com
 
 twitter:
   username: aruns89
 social:
-  name: Arun Kumar Singh
+  name: Arun Singh
   links:
     - https://github.com/arunsingh
     - https://www.linkedin.com/in/arunsingh23/
